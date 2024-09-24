@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, Modal } from 'react-bootstrap'
+import {  Form } from 'react-bootstrap'
 import './AddTask.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux';

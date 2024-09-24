@@ -39,7 +39,7 @@ function EditTask() {
       }
 
       dispatch(editTask({ id: Number(id), title, status }));
-      navigate("/")
+      navigate("/");
       console.log({title,status});
   }
   return (
