@@ -20,8 +20,6 @@ function EditTask() {
     navigate('/')
   }
 
-  
-
   const taskEdit = tasks.find((task) => task.id === Number(id));
   console.log("editt", taskEdit);
 
@@ -29,7 +27,7 @@ function EditTask() {
     if (taskEdit) {
       setTitle(taskEdit.title);
       setStatus(taskEdit.status);
-    }
+     }
     }, [taskEdit]);
 
 

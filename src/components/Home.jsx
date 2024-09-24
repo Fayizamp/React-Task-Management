@@ -22,7 +22,7 @@ function Home() {
 
   const handleComplete =(id) => {
     console.log("com", id);
-    dispatch(completeTask(id));
+    dispatch(completeTask(id));   // completeTask-action
   }
 
   const handleEdit = (id) => {
