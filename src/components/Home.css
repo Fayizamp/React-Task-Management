@@ -21,10 +21,14 @@
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+
+    text-align: center; /* Center text */
     &:hover{
         opacity: 0.8;
     }
 }
+
+
 .space{
     margin-bottom: 35px;
 }
@@ -39,6 +43,10 @@
     max-width: 200px;
     float: right;
     background-color: rgba(243, 247, 250, 0.726);
+    cursor: pointer;
+    &:hover{
+        background-color: aliceblue;
+    }
 }
 .sty input{
     margin-right: 10px;
@@ -85,4 +93,41 @@
 }
 #delete{
     color: red;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .bttn {
+        padding: 10px; 
+        font-weight:500 ;
+        font-size: 14px;
+    }
+
+    .float {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .float select {
+        
+        max-width: 100px;
+        padding: 7px;
+        font-size: 13px;
+
+    }
+
+    .list li {
+        padding: 6px;
+    }
+    
+    .sty p {
+        margin-bottom: 5px; /* Add margin for spacing */
+    }
+
+    
 }

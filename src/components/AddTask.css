@@ -1,7 +1,6 @@
 
 .cont{
-    min-width: 50%;
-    max-width: 50%;
+    max-width: 40%;
     margin:100px auto;
     background-color: rgb(220, 231, 200);
     max-height: 90vh;
@@ -38,4 +37,11 @@
    } */
 .cont h2{
     position: relative;
+}
+
+
+@media (max-width: 768px){
+  .cont{
+    max-width: 75%;
+  }
 }

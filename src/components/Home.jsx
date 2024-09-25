@@ -8,6 +8,7 @@ import { FaEdit } from "react-icons/fa";
 import { IoMdDoneAll } from "react-icons/io";
 import { completeTask, deleteTask } from "../redux/taskSlice";
 
+
 function Home() {
   const tasks = useSelector((state) => state.tasks);
   
@@ -30,7 +31,6 @@ function Home() {
   }
 
   const [filter, setFilter] = useState("all");
-
  
   const filteredTasks = tasks.filter(task => {
     if (filter === "all") return true;
@@ -43,7 +43,7 @@ function Home() {
       <h2 className="space">Task Management App</h2>
       <div className="float">
         <Link to="/add" className="bttn">
-          + Create Task
+          Create Task
         </Link>
         <Form.Select id="status" className="sel" value={filter} onChange={(e) => setFilter(e.target.value)}>
           <option value="all">All</option>
@@ -59,8 +59,7 @@ function Home() {
             <ListGroup.Item as="li" key={index} 
             style={task.status === "completed" ? { backgroundColor: '#d4edda', color: '#155724' } : {}}>
               <div className="sty">
-                {/* <input type="checkbox" /> */}
-                {/*  {task.status} */}
+                
                 <strong>{task.title}</strong>
                 <span className="flex">
                   <IoMdDoneAll className="items" id="complete"  onClick={() => handleComplete(task.id)} />
@@ -71,8 +70,7 @@ function Home() {
               </div>
             </ListGroup.Item>
           ))}
-          {/* <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
-            <ListGroup.Item as="li">Cras justo odio</ListGroup.Item> */}
+          
         </ListGroup>
       </div>
     </Container>
